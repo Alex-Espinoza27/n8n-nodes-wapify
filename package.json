@@ -1,0 +1,53 @@
+{
+  "name": "n8n-nodes-wapify",
+  "version": "0.1.0",
+  "description": "Nodo community de n8n para Wapify: enviar mensajes de WhatsApp por API (x-api-key), envío masivo, estado de instancia y uso.",
+  "keywords": [
+    "n8n-community-node-package",
+    "wapify",
+    "whatsapp",
+    "messaging"
+  ],
+  "license": "MIT",
+  "author": "Wapify",
+  "homepage": "https://ws.zigo.solutions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-Espinoza27/n8n-nodes-wapify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alex-Espinoza27/n8n-nodes-wapify/issues"
+  },
+  "engines": {
+    "node": ">=18.10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && node -e \"const fs=require('fs');fs.mkdirSync('dist/nodes/Wapify',{recursive:true});fs.copyFileSync('nodes/Wapify/wapify.svg','dist/nodes/Wapify/wapify.svg')\"",
+    "dev": "tsc --watch",
+    "lint": "tsc --noEmit"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/WapifyApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Wapify/Wapify.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "n8n-workflow": "*",
+    "typescript": "^5.4.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}

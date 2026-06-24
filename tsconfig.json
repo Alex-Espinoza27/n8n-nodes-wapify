@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es2019",
+    "lib": ["es2019", "es2020"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "outDir": "dist",
+    "rootDir": ".",
+    "noUnusedLocals": true,
+    "useUnknownInCatchVariables": false
+  },
+  "include": ["credentials/**/*.ts", "nodes/**/*.ts", "index.ts"],
+  "exclude": ["node_modules", "dist"]
+}
